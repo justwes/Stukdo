@@ -2,7 +2,8 @@
   <div class="panel-heading">
     <%= link_to edit_task_path(task) do %>
     Created
-    <%= time_ago_in_words(task.created_at) %>ago
+    <%= time_ago_in_words(task.created_at) %> ago
+    <%= link_to 'X', task_path(task), mthod: :delete, data: {confirm: 'Are you sure?'}, class: 'pull-right' %>
   </div>
   <% end %>
 
